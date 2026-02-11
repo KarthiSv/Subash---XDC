@@ -114,8 +114,8 @@ export const testimonials = [
 export const whyChooseUs = [
   {
     id: 1,
-    title: "500+ Costumes",
-    description: "India's largest curated collection of dance costumes across every genre and tradition.",
+    title: "3,000+ Costumes",
+    description: "India's largest curated collection of dance costumes across every genre — Bollywood, contemporary, hip-hop, Latin, classical, and folk.",
     icon: "Shirt"
   },
   {
