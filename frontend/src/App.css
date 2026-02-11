@@ -1,34 +1,169 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+body {
+  background-color: #050505;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
-.App-link {
-    color: #61dafb;
+/* ===== Font Families ===== */
+.font-playfair {
+  font-family: 'Playfair Display', serif;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== Gold Color System ===== */
+.text-gold {
+  color: #c9a96e;
+}
+
+.text-gold-light {
+  color: #dbb978;
+}
+
+.bg-gold {
+  background-color: #c9a96e;
+}
+
+.bg-gold-light {
+  background-color: #dbb978;
+}
+
+.border-gold {
+  border-color: #c9a96e;
+}
+
+.hover\:bg-gold-light:hover {
+  background-color: #dbb978;
+}
+
+.hover\:text-gold:hover {
+  color: #c9a96e;
+}
+
+.hover\:border-gold:hover {
+  border-color: #c9a96e;
+}
+
+/* ===== Selection Styles ===== */
+::selection {
+  background: rgba(201, 169, 110, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(201, 169, 110, 0.3);
+  color: #ffffff;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2a;
+}
+
+/* ===== Interactive Element Transitions ===== */
+a {
+  transition: color 0.3s ease;
+}
+
+button {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input, textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+img {
+  transition: transform 0.7s ease;
+}
+
+/* ===== Focus Styles ===== */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: rgba(201, 169, 110, 0.4) !important;
+  box-shadow: 0 0 0 1px rgba(201, 169, 110, 0.1);
+}
+
+/* ===== Custom Animations ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes subtle-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-subtle-glow {
+  animation: subtle-glow 4s ease-in-out infinite;
+}
+
+/* ===== Grain Texture Overlay ===== */
+.App::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
 }
