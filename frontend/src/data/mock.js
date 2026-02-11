@@ -4,7 +4,7 @@ export const costumeCategories = [
     name: "Bharatanatyam",
     description: "Traditional South Indian classical dance costumes with intricate temple jewelry",
     image: "https://images.unsplash.com/photo-1651512186979-737021ace442?w=600&h=750&fit=crop",
-    count: 85,
+    count: 450,
     tag: "Classical"
   },
   {
@@ -12,39 +12,39 @@ export const costumeCategories = [
     name: "Kathak",
     description: "Elegant North Indian classical dance attire with flowing silhouettes",
     image: "https://images.unsplash.com/photo-1740456977659-bdd269417fc0?w=600&h=750&fit=crop",
-    count: 62,
+    count: 320,
     tag: "Classical"
   },
   {
     id: 3,
     name: "Bollywood",
-    description: "Vibrant and glamorous costumes for Bollywood-style performances",
+    description: "Vibrant lehengas, sequined outfits & glamorous costumes for Bollywood performances",
     image: "https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb?w=600&h=750&fit=crop",
-    count: 120,
+    count: 680,
     tag: "Popular"
   },
   {
     id: 4,
-    name: "Contemporary",
-    description: "Modern and expressive outfits for contemporary dance forms",
+    name: "Contemporary & Latin",
+    description: "Modern fringe dresses, crop sets & expressive outfits for contemporary and Latin forms",
     image: "https://images.unsplash.com/photo-1550026593-cb89847b168d?w=600&h=750&fit=crop",
-    count: 45,
+    count: 380,
     tag: "Modern"
   },
   {
     id: 5,
     name: "Folk Dance",
-    description: "Colorful regional folk dance costumes from across India",
+    description: "Colorful regional folk dance costumes — Garba, Bhangra, Lavani & more from across India",
     image: "https://images.unsplash.com/photo-1569851935333-6ca1448cc299?w=600&h=750&fit=crop",
-    count: 95,
+    count: 520,
     tag: "Traditional"
   },
   {
     id: 6,
     name: "Hip-Hop",
-    description: "Street-style urban dance wear for high-energy performances",
+    description: "Street-style urban dance wear for high-energy championship performances",
     image: "https://images.unsplash.com/photo-1547153760-18fc86324498?w=600&h=750&fit=crop",
-    count: 38,
+    count: 290,
     tag: "Modern"
   }
 ];
