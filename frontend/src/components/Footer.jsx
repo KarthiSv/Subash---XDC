@@ -16,11 +16,11 @@ export const Footer = () => {
               </span>
             </Link>
             <p className="text-white/40 text-sm leading-relaxed font-inter mb-6">
-              India's premier dance costume rental service. Dressing performers for the spotlight since 2015.
+              India's premier dance costume rental service. 3,000+ costumes, pan-India delivery. Dressing performers for the spotlight since 2015.
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/xstatic_dance_costumes/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-gold hover:border-gold/40 transition-all duration-300"
