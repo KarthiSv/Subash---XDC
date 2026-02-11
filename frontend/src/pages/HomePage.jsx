@@ -403,6 +403,7 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
+      <RentalProcessStrip />
       <CategoriesSection />
       <WhyChooseSection />
       <TestimonialsSection />
