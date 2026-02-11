@@ -337,8 +337,9 @@ const InstagramSection = () => (
         <div className="text-center mb-12">
           <p className="text-gold text-[11px] uppercase tracking-[0.4em] font-inter font-semibold mb-4">Follow Us</p>
           <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-white">
-            @xstaticdancecostumes
+            @xstatic_dance_costumes
           </h2>
+          <p className="font-inter text-white/30 text-sm mt-2">15K+ followers · Costume showcases, rental tips & event highlights</p>
         </div>
       </AnimatedSection>
 
