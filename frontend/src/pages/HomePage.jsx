@@ -119,6 +119,29 @@ const HeroSection = () => {
   );
 };
 
+const RentalProcessStrip = () => (
+  <section className="bg-[#0a0a0a] border-y border-white/[0.04] py-10">
+    <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
+        {[
+          { step: "01", title: "Browse & Pick", desc: "Explore our 3,000+ collection online or in-store" },
+          { step: "02", title: "Book via DM", desc: "Reserve via Instagram DM, WhatsApp or call" },
+          { step: "03", title: "50% Deposit", desc: "Confirm with half payment, sizes XS–XXL" },
+          { step: "04", title: "Delivered to You", desc: "Pan-India courier or pick up in Bangalore" },
+        ].map((item) => (
+          <div key={item.step} className="flex gap-4 items-start">
+            <span className="text-gold/30 font-playfair text-2xl font-bold leading-none">{item.step}</span>
+            <div>
+              <p className="font-inter text-white text-sm font-semibold mb-1">{item.title}</p>
+              <p className="font-inter text-white/30 text-xs leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 const CategoriesSection = () => (
   <section className="py-32 bg-[#050505] relative">
     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
