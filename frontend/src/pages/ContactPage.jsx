@@ -31,18 +31,18 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    title: 'Call Us',
-    details: ['+91 98765 43210', '+91 80 2345 6789'],
+    title: 'Call / WhatsApp',
+    details: ['+91 98765 43210', 'DM us on Instagram for quick replies'],
   },
   {
     icon: Mail,
     title: 'Email Us',
-    details: ['hello@xdc.in', 'bookings@xdc.in'],
+    details: ['xstaticdance@gmail.com', 'bookings@xstaticdance.in'],
   },
   {
     icon: Clock,
     title: 'Working Hours',
-    details: ['Mon - Sat: 10:00 AM - 7:00 PM', 'Sunday: By appointment'],
+    details: ['Mon - Sat: 10:00 AM - 7:00 PM', 'Peak Season: Oct – Mar (book early!)'],
   },
 ];
 
