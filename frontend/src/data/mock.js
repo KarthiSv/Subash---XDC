@@ -60,9 +60,9 @@ export const services = [
   {
     id: 2,
     title: "Annual Day Solutions",
-    description: "Complete costume packages for school and college annual day events. We handle everything from theme selection to bulk delivery and returns.",
+    description: "Complete costume packages for school and college annual day events. We handle everything from theme selection to bulk delivery and returns. Peak season (Oct–Mar) books fast — reserve 2–4 weeks ahead.",
     icon: "GraduationCap",
-    features: ["Bulk orders", "Theme consultation", "Doorstep delivery", "Easy returns"]
+    features: ["Bulk orders", "Theme consultation", "Pan-India courier delivery", "Easy returns"]
   },
   {
     id: 3,
