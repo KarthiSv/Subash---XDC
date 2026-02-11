@@ -214,16 +214,16 @@ export const teamMembers = [
 export const galleryFilters = ["All", "Classical", "Bollywood", "Contemporary", "Folk", "Hip-Hop"];
 
 export const galleryCostumes = [
-  { id: 1, name: "Royal Bharatanatyam Set", category: "Classical", price: "₹1,500/day", image: "https://images.unsplash.com/photo-1651512186979-737021ace442?w=500&h=600&fit=crop" },
-  { id: 2, name: "Kathak Elegance", category: "Classical", price: "₹1,200/day", image: "https://images.unsplash.com/photo-1740456977659-bdd269417fc0?w=500&h=600&fit=crop" },
-  { id: 3, name: "Bollywood Diva", category: "Bollywood", price: "₹800/day", image: "https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb?w=500&h=600&fit=crop" },
-  { id: 4, name: "Contemporary Flow", category: "Contemporary", price: "₹700/day", image: "https://images.unsplash.com/photo-1550026593-cb89847b168d?w=500&h=600&fit=crop" },
-  { id: 5, name: "Rajasthani Folk", category: "Folk", price: "₹900/day", image: "https://images.unsplash.com/photo-1569851935333-6ca1448cc299?w=500&h=600&fit=crop" },
-  { id: 6, name: "Urban Street", category: "Hip-Hop", price: "₹600/day", image: "https://images.unsplash.com/photo-1547153760-18fc86324498?w=500&h=600&fit=crop" },
-  { id: 7, name: "Bollywood Festive", category: "Bollywood", price: "₹1,000/day", image: "https://images.unsplash.com/photo-1547106500-9b566874481b?w=500&h=600&fit=crop" },
-  { id: 8, name: "Modern Expression", category: "Contemporary", price: "₹750/day", image: "https://images.unsplash.com/photo-1529229504105-4ea795dcbf59?w=500&h=600&fit=crop" },
-  { id: 9, name: "Garba Delight", category: "Folk", price: "₹850/day", image: "https://images.unsplash.com/photo-1755946684049-03e1ebc67ea7?w=500&h=600&fit=crop" },
-  { id: 10, name: "Classical Fusion", category: "Classical", price: "₹1,100/day", image: "https://images.unsplash.com/photo-1547106510-6aec13ee41ff?w=500&h=600&fit=crop" },
-  { id: 11, name: "Hip-Hop Energy", category: "Hip-Hop", price: "₹650/day", image: "https://images.unsplash.com/photo-1769694513348-7143316bd433?w=500&h=600&fit=crop" },
-  { id: 12, name: "Bollywood Glam", category: "Bollywood", price: "₹950/day", image: "https://images.unsplash.com/photo-1479813183133-f2e9b38ed6c4?w=500&h=600&fit=crop" }
+  { id: 1, name: "Royal Bharatanatyam Set", category: "Classical", price: "₹2,500/3 days", image: "https://images.unsplash.com/photo-1651512186979-737021ace442?w=500&h=600&fit=crop" },
+  { id: 2, name: "Kathak Elegance", category: "Classical", price: "₹2,200/3 days", image: "https://images.unsplash.com/photo-1740456977659-bdd269417fc0?w=500&h=600&fit=crop" },
+  { id: 3, name: "Bollywood Lehenga", category: "Bollywood", price: "₹2,500/3 days", image: "https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb?w=500&h=600&fit=crop" },
+  { id: 4, name: "Contemporary Flow", category: "Contemporary", price: "₹1,800/3 days", image: "https://images.unsplash.com/photo-1550026593-cb89847b168d?w=500&h=600&fit=crop" },
+  { id: 5, name: "Rajasthani Folk", category: "Folk", price: "₹2,000/3 days", image: "https://images.unsplash.com/photo-1569851935333-6ca1448cc299?w=500&h=600&fit=crop" },
+  { id: 6, name: "Hip-Hop Crop Set", category: "Hip-Hop", price: "₹1,800/3 days", image: "https://images.unsplash.com/photo-1547153760-18fc86324498?w=500&h=600&fit=crop" },
+  { id: 7, name: "Bollywood Festive", category: "Bollywood", price: "₹3,000/3 days", image: "https://images.unsplash.com/photo-1547106500-9b566874481b?w=500&h=600&fit=crop" },
+  { id: 8, name: "Latin Fringe Dress", category: "Contemporary", price: "₹3,200/3 days", image: "https://images.unsplash.com/photo-1529229504105-4ea795dcbf59?w=500&h=600&fit=crop" },
+  { id: 9, name: "Garba Delight", category: "Folk", price: "₹1,500/3 days", image: "https://images.unsplash.com/photo-1755946684049-03e1ebc67ea7?w=500&h=600&fit=crop" },
+  { id: 10, name: "Classical Fusion", category: "Classical", price: "₹2,800/3 days", image: "https://images.unsplash.com/photo-1547106510-6aec13ee41ff?w=500&h=600&fit=crop" },
+  { id: 11, name: "Hip-Hop Energy", category: "Hip-Hop", price: "₹1,500/3 days", image: "https://images.unsplash.com/photo-1769694513348-7143316bd433?w=500&h=600&fit=crop" },
+  { id: 12, name: "Bollywood Glam", category: "Bollywood", price: "₹4,500/3 days", image: "https://images.unsplash.com/photo-1479813183133-f2e9b38ed6c4?w=500&h=600&fit=crop" }
 ];
