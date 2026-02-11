@@ -133,19 +133,19 @@ export const whyChooseUs = [
   {
     id: 4,
     title: "Expert Consultation",
-    description: "Our team helps you choose the perfect costumes for your theme and performance style.",
+    description: "Our team helps you choose the perfect costumes for your theme. Sizes XS–XXL available with alterations for ₹500–₹1,000.",
     icon: "MessageCircle"
   },
   {
     id: 5,
     title: "Hassle-Free Process",
-    description: "Simple booking, doorstep delivery, and easy returns. We handle the logistics.",
+    description: "Simple booking via DM or WhatsApp, 50% deposit to confirm, pan-India courier delivery, and easy returns.",
     icon: "CheckCircle"
   },
   {
     id: 6,
     title: "Trusted by 200+ Institutions",
-    description: "Schools, colleges, and academies across India trust XDC for their events.",
+    description: "Schools, colleges, dance academies, and championship competitors across India trust XDC. Rated 4.8/5 by our clients.",
     icon: "Shield"
   }
 ];
