@@ -347,7 +347,7 @@ const InstagramSection = () => (
         {instagramPosts.map((post, i) => (
           <AnimatedSection key={post.id} delay={i * 60}>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/xstatic_dance_costumes/"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative overflow-hidden aspect-square block"
