@@ -71,10 +71,10 @@ export default function AboutPage() {
                     What started as a small collection of classical dance costumes in Koramangala has grown into India's most comprehensive dance costume rental service. Our founder, Kavitha Suresh, a lifelong dancer herself, understood a simple truth — when a performer looks extraordinary, they feel extraordinary.
                   </p>
                   <p className="font-inter text-white/40 leading-relaxed">
-                    Today, XDC houses over 500 meticulously curated costumes spanning Bharatanatyam, Kathak, Bollywood, contemporary, folk, and hip-hop. We've dressed performers for over 1,200 events and partnered with 200+ institutions across India.
+                    Today, XDC houses over 3,000 meticulously curated costumes spanning Bharatanatyam, Kathak, Bollywood, contemporary, Latin, folk, and hip-hop — available in sizes XS to XXL with custom alterations. We serve performers across Mumbai, Delhi, Bangalore, Hyderabad, and 50+ cities pan-India via courier.
                   </p>
                   <p className="font-inter text-white/40 leading-relaxed">
-                    Every costume in our collection is more than just an outfit — it's a statement. Professionally maintained, authentically designed, and stage-ready, our pieces are crafted to elevate every performance.
+                    From Dance India Dance auditions to school annual days, our costumes have graced every stage. Rated 4.8/5 by our clients, every piece is professionally cleaned post-rental, authentically designed, and stage-ready. Rentals start at just ₹1,500 for 3 days.
                   </p>
                 </div>
               </div>
