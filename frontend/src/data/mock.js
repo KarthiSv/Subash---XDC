@@ -55,7 +55,7 @@ export const services = [
     title: "Costume Rentals",
     description: "Extensive collection of dance costumes for every genre — classical, folk, Bollywood, contemporary, and more. All costumes are professionally maintained and stage-ready.",
     icon: "Sparkles",
-    features: ["500+ costumes", "All dance genres", "Stage-ready quality", "Custom fitting available"]
+    features: ["3,000+ costumes", "All dance genres", "Stage-ready quality", "Custom fitting & alterations"]
   },
   {
     id: 2,
