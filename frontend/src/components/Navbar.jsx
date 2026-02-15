@@ -69,7 +69,7 @@ export const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <Link to="/contact">
+            <Link to="/book">
               <Button className="bg-gold hover:bg-gold-light text-[#050505] font-inter text-xs uppercase tracking-[0.15em] px-6 py-2.5 rounded-none font-semibold transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,110,0.3)]">
                 <Phone className="w-3.5 h-3.5 mr-2" />
                 Book Now
