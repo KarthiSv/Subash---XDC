@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Heart, Sparkles, GraduationCap, Palette, Crown, Shirt, MapPin, Award, MessageCircle, CheckCircle, Shield, ArrowUpRight, Play } from 'lucide-react';
+import { ArrowRight, Star, Heart, Sparkles, GraduationCap, Palette, Crown, Shirt, MapPin, Award, MessageCircle, CheckCircle, Shield, ArrowUpRight, Play, Music, ChevronRight, User } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Card } from '../components/ui/card';
