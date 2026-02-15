@@ -36,13 +36,21 @@ export const Footer = () => {
               Navigate
             </h4>
             <ul className="space-y-3">
-              {['Home', 'Costumes', 'Services', 'About', 'Contact'].map((item) => (
-                <li key={item}>
+              {[
+                { label: 'Home', to: '/' },
+                { label: 'Costumes', to: '/costumes' },
+                { label: 'Dance Classes', to: '/dance-classes' },
+                { label: 'Services', to: '/services' },
+                { label: 'Gallery', to: '/gallery' },
+                { label: 'Book Now', to: '/book' },
+                { label: 'Contact', to: '/contact' },
+              ].map((item) => (
+                <li key={item.label}>
                   <Link
-                    to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                    to={item.to}
                     className="text-white/40 hover:text-white text-sm font-inter transition-colors duration-300 flex items-center gap-1 group"
                   >
-                    {item}
+                    {item.label}
                     <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
                   </Link>
                 </li>
