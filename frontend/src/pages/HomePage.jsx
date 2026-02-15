@@ -314,6 +314,115 @@ const TestimonialsSection = () => {
   );
 };
 
+const DanceAcademySection = () => (
+  <section className="py-32 bg-[#050505] relative">
+    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+    <div className="absolute top-1/3 left-0 w-72 h-72 bg-gold/[0.03] rounded-full blur-[120px]" />
+    <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <AnimatedSection>
+        <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mb-16 gap-4">
+          <div>
+            <p className="text-gold text-[11px] uppercase tracking-[0.4em] font-inter font-semibold mb-4">Dance Academy</p>
+            <h2 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+              Learn to <span className="text-gold">Dance</span>
+            </h2>
+            <p className="font-inter text-white/40 text-lg max-w-xl">
+              10+ dance styles, professional instructors, all ages welcome. From classical grace to street energy.
+            </p>
+          </div>
+          <Link to="/dance-classes">
+            <Button variant="outline" className="border-white/10 text-white/60 hover:bg-white/5 hover:border-gold/30 hover:text-gold font-inter text-xs uppercase tracking-[0.15em] px-8 py-5 rounded-none transition-all duration-300 group whitespace-nowrap">
+              View All Classes
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </Button>
+          </Link>
+        </div>
+      </AnimatedSection>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {danceStyles.slice(0, 4).map((style, i) => (
+          <AnimatedSection key={style.id} delay={i * 80}>
+            <Link to="/dance-classes">
+              <Card className="group relative overflow-hidden bg-transparent border-white/[0.06] rounded-none cursor-pointer h-[300px] hover:border-gold/20 transition-all duration-500">
+                <div className="absolute inset-0">
+                  <img src={style.image} alt={style.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/50 to-transparent" />
+                </div>
+                <div className="relative z-10 h-full flex flex-col justify-end p-5">
+                  <Badge className="bg-gold/10 text-gold border-gold/20 rounded-none text-[9px] uppercase tracking-[0.2em] font-inter w-fit mb-2 hover:bg-gold/10">{style.level}</Badge>
+                  <h3 className="font-playfair text-lg font-bold text-white group-hover:text-gold transition-colors duration-300">{style.name}</h3>
+                  <p className="font-inter text-white/30 text-xs mt-1">{style.schedule}</p>
+                </div>
+              </Card>
+            </Link>
+          </AnimatedSection>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mt-4">
+        {danceStyles.slice(4).map((style, i) => (
+          <AnimatedSection key={style.id} delay={i * 60}>
+            <Link to="/dance-classes">
+              <div className="group bg-white/[0.02] border border-white/[0.06] p-4 hover:border-gold/20 transition-all duration-500 cursor-pointer text-center">
+                <Music className="w-4 h-4 text-gold/50 mx-auto mb-2" />
+                <p className="font-inter text-white/60 text-xs font-semibold group-hover:text-gold transition-colors duration-300">{style.name}</p>
+              </div>
+            </Link>
+          </AnimatedSection>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const FounderManagerSection = () => (
+  <section className="py-24 bg-[#0a0a0a] relative overflow-hidden">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold/[0.03] rounded-full blur-[150px]" />
+    <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <AnimatedSection>
+        <div className="text-center mb-16">
+          <p className="text-gold text-[11px] uppercase tracking-[0.4em] font-inter font-semibold mb-4">The People Behind XDC</p>
+          <h2 className="font-playfair text-4xl sm:text-5xl font-bold text-white">
+            Meet Our <span className="text-gold">Leadership</span>
+          </h2>
+        </div>
+      </AnimatedSection>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {teamMembers.map((member, i) => (
+          <AnimatedSection key={member.id} delay={i * 150}>
+            <Card className="bg-white/[0.02] border-white/[0.06] rounded-none overflow-hidden hover:border-gold/20 transition-all duration-500 group">
+              <div className="p-8">
+                <div className="flex items-start gap-6">
+                  {/* Photo placeholder */}
+                  <div className="w-24 h-24 bg-gold/[0.08] border-2 border-gold/20 flex items-center justify-center flex-shrink-0 group-hover:border-gold/40 transition-all duration-500">
+                    <User className="w-10 h-10 text-gold/30" />
+                  </div>
+                  <div className="flex-1">
+                    <Badge className="bg-gold/10 text-gold border-gold/20 rounded-none text-[9px] uppercase tracking-[0.25em] font-inter mb-3 hover:bg-gold/10">
+                      {member.isFounder ? 'Founder' : 'Manager'}
+                    </Badge>
+                    <h3 className="font-playfair text-2xl font-bold text-white group-hover:text-gold transition-colors duration-300">
+                      {member.name}
+                    </h3>
+                    <p className="text-gold/50 text-xs uppercase tracking-[0.2em] font-inter mt-1 mb-4">
+                      {member.role}
+                    </p>
+                    <Separator className="bg-white/[0.06] mb-4" />
+                    <p className="font-inter text-white/35 text-sm leading-relaxed">
+                      {member.bio}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </AnimatedSection>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 const CTASection = () => (
   <section className="py-32 bg-[#0a0a0a] relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.03] to-transparent" />
