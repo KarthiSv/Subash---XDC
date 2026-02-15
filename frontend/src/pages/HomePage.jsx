@@ -76,7 +76,7 @@ const HeroSection = () => {
               loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            Premium dance costume rentals for schools, colleges, academies & events. 3,000+ costumes across every genre, delivered to your doorstep pan-India.
+            Premium dance academy & costume rentals. 3,000+ costumes, 10+ dance styles, professional choreography — serving schools, colleges & events pan-India.
           </p>
 
           <div
