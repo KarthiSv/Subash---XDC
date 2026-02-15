@@ -65,10 +65,21 @@ export default function BookingPage() {
       return;
     }
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    toast.success('Booking request sent! We\'ll get back to you within 24 hours.');
-    setFormData({ name: '', email: '', phone: '', serviceType: '', message: '' });
-    setIsSubmitting(false);
+    try {
+      await axios.post(`${API}/bookings`, {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        service_type: formData.serviceType,
+        message: formData.message,
+      });
+      toast.success('Booking request sent! We\'ll get back to you within 24 hours.');
+      setFormData({ name: '', email: '', phone: '', serviceType: '', message: '' });
+    } catch (err) {
+      toast.error('Failed to submit. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
