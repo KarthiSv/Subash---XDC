@@ -4,8 +4,11 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import CostumesGallery from "./pages/CostumesGallery";
-import ServicesPage from "./pages/ServicesPage";
+import DanceClassesPage from "./pages/DanceClassesPage";
+import AllServicesPage from "./pages/AllServicesPage";
+import GalleryPage from "./pages/GalleryPage";
 import AboutPage from "./pages/AboutPage";
+import BookingPage from "./pages/BookingPage";
 import ContactPage from "./pages/ContactPage";
 import "./App.css";
 
@@ -17,8 +20,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/costumes" element={<CostumesGallery />} />
-          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/dance-classes" element={<DanceClassesPage />} />
+          <Route path="/services" element={<AllServicesPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/book" element={<BookingPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
