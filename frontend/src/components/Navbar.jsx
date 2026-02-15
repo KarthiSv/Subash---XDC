@@ -21,8 +21,9 @@ export const Navbar = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/costumes', label: 'Costumes' },
+    { path: '/dance-classes', label: 'Dance Classes' },
     { path: '/services', label: 'Services' },
-    { path: '/about', label: 'About' },
+    { path: '/gallery', label: 'Gallery' },
     { path: '/contact', label: 'Contact' },
   ];
 
