@@ -185,9 +185,9 @@ export const instagramPosts = [
 
 export const stats = [
   { label: "Costumes", value: "3,000+" },
+  { label: "Dance Styles", value: "10+" },
   { label: "Events Served", value: "1,200+" },
-  { label: "Happy Clients", value: "200+" },
-  { label: "Cities Reached", value: "50+" }
+  { label: "Happy Clients", value: "200+" }
 ];
 
 export const teamMembers = [
