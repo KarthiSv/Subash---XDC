@@ -1,15 +1,13 @@
 from fastapi import FastAPI, APIRouter
+from fastapi.staticfiles import StaticFiles
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
-from typing import List
-import uuid
-from datetime import datetime, timezone
-
+from auth import get_password_hash
+from routes.admin import create_admin_routes
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -17,62 +15,35 @@ load_dotenv(ROOT_DIR / '.env')
 # MongoDB connection
 mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+db = client[os.environ.get('DB_NAME', 'xdc_db')]
 
-# Create the main app without a prefix
+# Create the main app
 app = FastAPI()
 
-# Create a router with the /api prefix
+# Create base router
 api_router = APIRouter(prefix="/api")
 
-
-# Define Models
-class StatusCheck(BaseModel):
-    model_config = ConfigDict(extra="ignore")  # Ignore MongoDB's _id field
-    
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    client_name: str
-    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-
-class StatusCheckCreate(BaseModel):
-    client_name: str
-
-# Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "XDC API - Dance Academy & Costume House"}
 
-@api_router.post("/status", response_model=StatusCheck)
-async def create_status_check(input: StatusCheckCreate):
-    status_dict = input.model_dump()
-    status_obj = StatusCheck(**status_dict)
-    
-    # Convert to dict and serialize datetime to ISO string for MongoDB
-    doc = status_obj.model_dump()
-    doc['timestamp'] = doc['timestamp'].isoformat()
-    
-    _ = await db.status_checks.insert_one(doc)
-    return status_obj
+# Include admin routes
+admin_router = create_admin_routes(db)
+app.include_router(admin_router)
 
-@api_router.get("/status", response_model=List[StatusCheck])
-async def get_status_checks():
-    # Exclude MongoDB's _id field from the query results
-    status_checks = await db.status_checks.find({}, {"_id": 0}).to_list(1000)
-    
-    # Convert ISO string timestamps back to datetime objects
-    for check in status_checks:
-        if isinstance(check['timestamp'], str):
-            check['timestamp'] = datetime.fromisoformat(check['timestamp'])
-    
-    return status_checks
-
-# Include the router in the main app
+# Include base router
 app.include_router(api_router)
 
+# Serve uploaded files
+UPLOAD_DIR = ROOT_DIR / "uploads"
+UPLOAD_DIR.mkdir(exist_ok=True)
+app.mount("/api/uploads", StaticFiles(directory=str(UPLOAD_DIR)), name="uploads")
+
+# CORS
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -83,6 +54,53 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+
+async def seed_admin():
+    """Seed default admin user if none exists."""
+    existing = await db.admin_users.find_one({"email": "admin@xdc.in"})
+    if not existing:
+        admin = {
+            "id": "admin-default",
+            "email": "admin@xdc.in",
+            "name": "XDC Admin",
+            "password_hash": get_password_hash("xdc2025"),
+            "role": "admin"
+        }
+        await db.admin_users.insert_one(admin)
+        logger.info("Default admin user created: admin@xdc.in / xdc2025")
+    else:
+        logger.info("Admin user already exists")
+
+
+async def seed_content():
+    """Seed default editable content blocks."""
+    content_blocks = [
+        {"key": "hero_badge", "value": "Dance Academy & Costume House — Bangalore", "label": "Hero Badge Text", "section": "homepage"},
+        {"key": "hero_title_1", "value": "Dress the", "label": "Hero Title Line 1", "section": "homepage"},
+        {"key": "hero_title_2", "value": "Performance.", "label": "Hero Title Line 2 (Gold)", "section": "homepage"},
+        {"key": "hero_title_3", "value": "Own the Stage.", "label": "Hero Title Line 3", "section": "homepage"},
+        {"key": "hero_description", "value": "Premium dance academy & costume rentals. 3,000+ costumes, 10+ dance styles, professional choreography — serving schools, colleges & events pan-India.", "label": "Hero Description", "section": "homepage"},
+        {"key": "contact_email", "value": "company.xdc@gmail.com", "label": "Contact Email", "section": "contact"},
+        {"key": "contact_phone", "value": "9074345925", "label": "Contact Phone", "section": "contact"},
+        {"key": "contact_whatsapp", "value": "9074345925", "label": "WhatsApp Number", "section": "contact"},
+        {"key": "contact_address", "value": "Koramangala, Bangalore, Karnataka 560034, India", "label": "Address", "section": "contact"},
+        {"key": "about_text", "value": "What started as a small collection of classical dance costumes has grown into India's most comprehensive dance costume rental service and dance academy.", "label": "About Text", "section": "about"},
+        {"key": "announcement", "value": "", "label": "Announcement Banner (leave empty to hide)", "section": "general"},
+    ]
+    for block in content_blocks:
+        existing = await db.content.find_one({"key": block["key"]})
+        if not existing:
+            await db.content.insert_one(block)
+    logger.info("Content blocks seeded")
+
+
+@app.on_event("startup")
+async def startup():
+    await seed_admin()
+    await seed_content()
+    logger.info("XDC Backend started successfully")
+
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
