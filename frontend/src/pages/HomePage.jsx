@@ -514,7 +514,9 @@ export default function HomePage() {
       <HeroSection />
       <RentalProcessStrip />
       <CategoriesSection />
+      <DanceAcademySection />
       <WhyChooseSection />
+      <FounderManagerSection />
       <TestimonialsSection />
       <CTASection />
       <InstagramSection />
