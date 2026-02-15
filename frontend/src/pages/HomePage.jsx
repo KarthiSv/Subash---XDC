@@ -57,7 +57,7 @@ const HeroSection = () => {
             }`}
           >
             <Badge className="bg-gold/10 text-gold border-gold/20 rounded-none px-4 py-1.5 text-[10px] uppercase tracking-[0.3em] font-inter mb-8 hover:bg-gold/10">
-              Bangalore's Premier Costume House
+              Dance Academy & Costume House — Bangalore
             </Badge>
           </div>
 
