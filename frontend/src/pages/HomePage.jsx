@@ -6,7 +6,7 @@ import { Badge } from '../components/ui/badge';
 import { Card } from '../components/ui/card';
 import { Separator } from '../components/ui/separator';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { costumeCategories, whyChooseUs, testimonials, instagramPosts, stats } from '../data/mock';
+import { costumeCategories, whyChooseUs, testimonials, instagramPosts, stats, danceStyles, danceServices, teamMembers } from '../data/mock';
 
 const iconMap = {
   Sparkles, GraduationCap, Palette, Crown, Shirt, MapPin, Award, MessageCircle, CheckCircle, Shield
