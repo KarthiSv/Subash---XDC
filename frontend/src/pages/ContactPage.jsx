@@ -32,12 +32,12 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Call / WhatsApp',
-    details: ['+91 98765 43210', 'DM us on Instagram for quick replies'],
+    details: ['+91 90743 45925', 'WhatsApp for instant replies'],
   },
   {
     icon: Mail,
     title: 'Email Us',
-    details: ['xstaticdance@gmail.com', 'bookings@xstaticdance.in'],
+    details: ['company.xdc@gmail.com'],
   },
   {
     icon: Clock,
