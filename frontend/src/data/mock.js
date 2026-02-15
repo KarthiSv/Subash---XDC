@@ -193,21 +193,19 @@ export const stats = [
 export const teamMembers = [
   {
     id: 1,
-    name: "Kavitha Suresh",
+    name: "Subash Ravichandran",
     role: "Founder & Creative Director",
-    bio: "A passionate dancer and costume designer with 15+ years of experience in performance arts."
+    bio: "A passionate dancer, choreographer, and visionary behind XDC. With over 15 years in the performing arts industry, Subash leads both the costume and dance academy verticals.",
+    initials: "SR",
+    isFounder: true
   },
   {
     id: 2,
-    name: "Rajesh Kumar",
-    role: "Operations Head",
-    bio: "Ensures seamless logistics and timely deliveries for every event, big or small."
-  },
-  {
-    id: 3,
-    name: "Ananya Rao",
-    role: "Lead Stylist",
-    bio: "Expert in classical dance styling with deep knowledge of traditional costume aesthetics."
+    name: "Arya K G",
+    role: "Manager",
+    bio: "Ensures seamless operations across costumes, dance classes, and events. Arya keeps XDC running smoothly — from logistics to client happiness.",
+    initials: "AK",
+    isManager: true
   }
 ];
 
