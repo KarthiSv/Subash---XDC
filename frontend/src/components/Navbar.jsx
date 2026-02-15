@@ -106,7 +106,7 @@ export const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <Link to="/contact" className="mt-4">
+          <Link to="/book" className="mt-4">
             <Button className="bg-gold hover:bg-gold-light text-[#050505] font-inter text-sm uppercase tracking-[0.15em] px-8 py-3 rounded-none font-semibold">
               Book Now
             </Button>
