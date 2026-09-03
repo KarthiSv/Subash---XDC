@@ -1,0 +1,8 @@
+# Core: enough to run the API server and the pure DSP/text logic
+# (app/pipeline/retime.py, app/pipeline/pitch.py) with no model downloads.
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+numpy==1.26.4
+soundfile==0.12.1
+pytest==8.3.3

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createDubbing, MOCK_MODE } from "../../../lib/elevenlabs";
+import { createDubbing, MOCK_MODE } from "../../../lib/provider";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;

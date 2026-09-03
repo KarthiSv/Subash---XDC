@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { fetchDubbedAudio, MOCK_MODE } from "../../../../../lib/elevenlabs";
+import { fetchDubbedAudio, MOCK_MODE } from "../../../../../lib/provider";
 
 export const runtime = "nodejs";
 

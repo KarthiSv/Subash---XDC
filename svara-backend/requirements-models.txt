@@ -1,0 +1,9 @@
+# AI stages: needs real internet access (Hugging Face Hub, GitHub releases,
+# etc. — hosts this sandbox's egress proxy blocks) and, for anything but a
+# short clip, a GPU. Install this on your own machine or a Colab runtime,
+# not inside a locked-down sandbox.
+-r requirements.txt
+demucs==4.0.1              # vocal / instrumental separation
+faster-whisper==1.0.3      # transcription with word-level timestamps
+argostranslate==1.9.6      # fully offline MT once language packages are installed
+TTS==0.22.0                # Coqui TTS — XTTS-v2 zero-shot voice cloning

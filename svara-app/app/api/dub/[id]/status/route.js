@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getDubbingStatus, MOCK_MODE } from "../../../../../lib/elevenlabs";
+import { getDubbingStatus, MOCK_MODE } from "../../../../../lib/provider";
 
 export const runtime = "nodejs";
 

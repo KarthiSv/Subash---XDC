@@ -1,10 +1,24 @@
 # Svara
 
 Translate a song's lyrics into another language while keeping the original
-singer's exact voice, tone, breath and timing — powered by the
-[ElevenLabs Dubbing API](https://elevenlabs.io/docs/api-reference/dubbing),
-which handles vocal isolation, meaning-locked translation, rhythm re-fit, and
-voice-preserving resynthesis in one call.
+singer's exact voice, tone, breath and timing.
+
+Two interchangeable backends power the actual conversion — pick one with
+`CONVERSION_BACKEND` in `.env.local` (see `.env.example`):
+
+- **`elevenlabs`** (default) — the paid [ElevenLabs Dubbing API](https://elevenlabs.io/docs/api-reference/dubbing).
+  Vocal isolation, translation, rhythm re-fit and voice-preserving
+  resynthesis in one hosted call.
+- **`opensource`** — the free, self-hosted pipeline in
+  [`../svara-backend`](../svara-backend/README.md): Demucs + faster-whisper +
+  Argos Translate + Coqui XTTS-v2, with real syllable-timing and
+  pitch-alignment logic written (and unit-tested) from scratch, no paid API
+  involved. Run that server separately and point `OPEN_SOURCE_BACKEND_URL`
+  at it.
+
+Both expose the same job contract to this app (`lib/provider.js` picks
+between `lib/elevenlabs.js` and `lib/providers/openSource.js`), so the UI
+and API routes don't change based on which one is active.
 
 This is a standalone Next.js app, self-contained under `svara-app/` so it
 doesn't touch the existing XDC dance-studio site elsewhere in this repo.
