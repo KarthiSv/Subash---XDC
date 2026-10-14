@@ -1,0 +1,5 @@
+aiohttp>=3.9
+# Optional: understand free-form phrasing with Claude (set ANTHROPIC_API_KEY)
+anthropic>=1.0
+# Optional: print a QR code you can scan with the iPhone camera
+qrcode>=7.4

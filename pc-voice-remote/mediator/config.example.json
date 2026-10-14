@@ -1,0 +1,9 @@
+{
+  "token": "",
+  "llm_fallback": "auto",
+  "macros": {
+    "movie mode": ["open netflix in chrome", "set volume to 60", "brightness 80"],
+    "good night": ["pause", "set volume to 10", "turn off bluetooth", "sleep"],
+    "work mode": ["open chrome", "open outlook", "open vs code"]
+  }
+}

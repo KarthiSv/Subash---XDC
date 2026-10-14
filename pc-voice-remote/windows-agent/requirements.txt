@@ -1,0 +1,4 @@
+aiohttp>=3.9
+# Optional: exact "set volume to 40" and showing the current volume level
+pycaw>=20240210
+comtypes>=1.4

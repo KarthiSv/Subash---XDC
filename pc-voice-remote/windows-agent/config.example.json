@@ -1,0 +1,64 @@
+{
+  "token": "PASTE_THE_TOKEN_THE_MEDIATOR_PRINTS",
+  "mediator_url": "ws://127.0.0.1:8765/ws/agent",
+  "agent_name": "",
+  "verify_tls": true,
+
+  "default_browser": "chrome",
+  "browsers": {
+    "chrome": "chrome",
+    "edge": "msedge",
+    "firefox": "firefox",
+    "brave": "brave",
+    "opera": "opera"
+  },
+
+  "apps": {
+    "chrome": "chrome",
+    "edge": "msedge",
+    "notepad": "notepad",
+    "calculator": "calc",
+    "paint": "mspaint",
+    "file explorer": "explorer",
+    "explorer": "explorer",
+    "files": "explorer",
+    "settings": "ms-settings:",
+    "bluetooth settings": "ms-settings:bluetooth",
+    "sound settings": "ms-settings:sound",
+    "task manager": "taskmgr",
+    "command prompt": "cmd",
+    "terminal": "wt",
+    "powershell": "powershell",
+    "word": "winword",
+    "excel": "excel",
+    "powerpoint": "powerpnt",
+    "vs code": "code",
+    "visual studio code": "code"
+  },
+
+  "process_names": {
+    "chrome": "chrome.exe",
+    "edge": "msedge.exe",
+    "firefox": "firefox.exe",
+    "spotify": "Spotify.exe",
+    "notepad": "notepad.exe",
+    "word": "WINWORD.EXE",
+    "excel": "EXCEL.EXE",
+    "powerpoint": "POWERPNT.EXE",
+    "vs code": "Code.exe",
+    "vlc": "vlc.exe",
+    "netflix": "Netflix.exe",
+    "teams": "ms-teams.exe",
+    "whatsapp": "WhatsApp.exe",
+    "discord": "Discord.exe",
+    "steam": "steam.exe"
+  },
+
+  "custom_commands": {
+    "open downloads": "explorer %USERPROFILE%\\Downloads",
+    "empty recycle bin": "powershell -NoProfile -Command Clear-RecycleBin -Force"
+  },
+
+  "shutdown_delay_seconds": 10,
+  "allow_power_actions": true
+}
